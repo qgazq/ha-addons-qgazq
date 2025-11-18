@@ -1,0 +1,34 @@
+{
+  "name": "iptables rules",
+  "version": "1.1.7",
+  "slug": "iptables-rules",
+  "description": "Lets me mod uptables",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "url": "https://github.com/qgazq/ha-addons-qgazq/tree/main/iptables-rules",
+  "startup": "once",
+  "boot": "auto",
+  "host_network": true,
+  "apparmor": false,
+  "host_dbus": true,
+  "full_access": true,
+  "privileged": [
+    "NET_ADMIN",
+    "SYS_ADMIN",
+    "SYS_RAWIO",
+    "SYS_TIME",
+    "SYS_NICE"
+  ],
+  "devices": [
+    "/dev/mem"
+  ],
+  "map": [
+    "config:rw"
+  ],
+  "init": false,
+  "options": {
+    "line": ""
+  },
+  "schema": {
+    "line": "str"
+  }
+} 
