@@ -1,0 +1,4 @@
+# https://developers.home-assistant.io/docs/add-ons/repository#repository-configuration
+name: QGazQ Home Assistant add-on repository
+url: 'https://github.com/qgazq/ha-addons-qgazq'
+maintainer: QGazQ <email@qgazq.net>
