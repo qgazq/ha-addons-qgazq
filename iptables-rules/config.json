@@ -5,7 +5,7 @@
   "description": "Lets me mod uptables",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "url": "https://github.com/qgazq/ha-addons-qgazq/tree/main/iptables-rules",
-  "startup": "once",
+  "startup": "application",
   "boot": "auto",
   "host_network": true,
   "apparmor": false,
