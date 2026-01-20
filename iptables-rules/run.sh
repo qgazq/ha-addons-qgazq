@@ -28,6 +28,11 @@ echo iptables -t nat -I PREROUTING 2 -i wlan0 -p udp --dport 123 -j DNAT --to-de
 iptables -t nat -I PREROUTING 2 -i wlan0 -p udp --dport 123 -j DNAT --to-destination $NTPHOST:123
 echo "-------------"
 
+echo Adding ping bridge rules
+iptables -A FORWARD -p icmp -i end0 -o wlan0 -j ACCEPT
+iptables -A FORWARD -p icmp -i wlan0 -o end0 -m state --state RELATED,ESTABLISHED -j ACCEPT
+echo "-------------"
+
 echo Adding logging rules
 iptables -A FORWARD -i wlan0 -j LOG
 iptables -A POSTROUTING -o end0 -s 192.168.12.0/24 -j LOG -t nat
