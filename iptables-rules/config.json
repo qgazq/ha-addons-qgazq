@@ -1,6 +1,6 @@
 {
   "name": "iptables rules",
-  "version": "1.4",
+  "version": "1.5",
   "slug": "iptables-rules",
   "description": "Lets me mod uptables",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
